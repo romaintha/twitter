@@ -24,7 +24,8 @@ class Streaming:
         while True:
             try:
                 self.stream.filter(track=to_track)
-            except Exception:
+            except Exception as e:
+                import ipdb; ipdb.set_trace()
                 logging.exception('stream filter')
                 time.sleep(3)
 

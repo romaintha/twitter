@@ -1,5 +1,4 @@
 import os
-from py2neo import ServiceRoot, authenticate
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 

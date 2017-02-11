@@ -16,10 +16,6 @@ class Tweet(neomodel.StructuredNode):
     coordinates = neomodel.ArrayProperty(required=False, default=[])
     lang = neomodel.StringProperty(required=False)
     features = neomodel.JSONProperty(required=False, default={})
-    is_training_tweet = neomodel.BooleanProperty(default=False)
-    is_sentiment_analyzed = neomodel.BooleanProperty(default=False)
-    sentiment = neomodel.StringProperty(required=False)  # "neg' or 'pos' or 'neu'
-    manually_analyzed = neomodel.BooleanProperty(default=False)
 
     retweets = neomodel.RelationshipTo('Tweet', 'RETWEETS')
     mentions = neomodel.RelationshipTo('User', 'MENTIONS')
