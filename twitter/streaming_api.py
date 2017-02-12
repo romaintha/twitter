@@ -58,6 +58,6 @@ class Listener(tweepy.StreamListener):
 
     @staticmethod
     def tweet_filter(status):
-        if hasattr(status, 'lang') and status.lang != 'fr':
+        if getattr(status, 'lang') != 'fr':
             return False
         return True
